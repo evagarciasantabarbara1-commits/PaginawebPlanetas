@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Alumno/a de UD1">
+    <meta name="description" content="Los ocho planetas del Sistema Solar comparados: tamaño, distancia al Sol, día, año y temperatura.">
+    <title>Los planetas del Sistema Solar</title>
+
+    <style>
+    :root{--bg:#0b1026;--card:#151c3d;--ink:#eef1ff;--mute:#a9b2d6;--sun:#ffd166}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:"Trebuchet MS","Segoe UI",system-ui,sans-serif;background:var(--bg) url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIj48Y2lyY2xlIGN4PSIxMjAiIGN5PSIxNTUiIHI9IjAuNiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMSIvPjxjaXJjbGUgY3g9IjIwMiIgY3k9IjI0NSIgcj0iMC42IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjQiLz48Y2lyY2xlIGN4PSIzNCIgY3k9IjEwIiByPSIwLjkiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjEiLz48Y2lyY2xlIGN4PSIxNDgiIGN5PSIzOTEiIHI9IjAuNiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC40Ii8+PGNpcmNsZSBjeD0iMjY2IiBjeT0iMjc0IiByPSIwLjkiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNyIvPjxjaXJjbGUgY3g9IjM5OSIgY3k9Ijg4IiByPSIwLjYiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNyIvPjxjaXJjbGUgY3g9IjEwOSIgY3k9IjEzIiByPSIxLjIiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNyIvPjxjaXJjbGUgY3g9IjEzOSIgY3k9Ijk5IiByPSIwLjYiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNyIvPjxjaXJjbGUgY3g9IjE0OCIgY3k9IjMyMSIgcj0iMS4yIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjciLz48Y2lyY2xlIGN4PSI0NCIgY3k9IjMxMCIgcj0iMC45IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIxIi8+PGNpcmNsZSBjeD0iMTk4IiBjeT0iMjU5IiByPSIwLjYiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNCIvPjxjaXJjbGUgY3g9IjEyNiIgY3k9IjI0MiIgcj0iMC45IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjQiLz48Y2lyY2xlIGN4PSIyODAiIGN5PSIxNTMiIHI9IjAuNiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC43Ii8+PGNpcmNsZSBjeD0iMjkzIiBjeT0iMzYwIiByPSIwLjkiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjEiLz48Y2lyY2xlIGN4PSI5OSIgY3k9IjIxMSIgcj0iMC45IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIxIi8+PGNpcmNsZSBjeD0iMTQ3IiBjeT0iMjIwIiByPSIwLjkiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNCIvPjxjaXJjbGUgY3g9IjExOSIgY3k9IjE1NiIgcj0iMC45IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjQiLz48Y2lyY2xlIGN4PSI0MSIgY3k9IjIzIiByPSIwLjkiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjEiLz48Y2lyY2xlIGN4PSIxNDMiIGN5PSIyNjUiIHI9IjEuMiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMSIvPjxjaXJjbGUgY3g9IjI0MSIgY3k9IjM1OCIgcj0iMC45IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjQiLz48Y2lyY2xlIGN4PSIzNDQiIGN5PSIxMDAiIHI9IjAuNiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC43Ii8+PGNpcmNsZSBjeD0iMTAzIiBjeT0iMzI1IiByPSIxLjIiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNyIvPjxjaXJjbGUgY3g9IjE0MSIgY3k9Ijk0IiByPSIwLjkiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNyIvPjxjaXJjbGUgY3g9IjM4MiIgY3k9IjMwMSIgcj0iMC45IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIxIi8+PGNpcmNsZSBjeD0iMjg1IiBjeT0iMTAxIiByPSIwLjkiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNCIvPjxjaXJjbGUgY3g9IjMxIiBjeT0iMzYyIiByPSIwLjYiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNyIvPjxjaXJjbGUgY3g9IjM5MSIgY3k9IjI5OCIgcj0iMS4yIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjQiLz48Y2lyY2xlIGN4PSI2MiIgY3k9IjE2OSIgcj0iMC42IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjciLz48Y2lyY2xlIGN4PSIyMzUiIGN5PSIxMyIgcj0iMC42IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjciLz48Y2lyY2xlIGN4PSIzNTciIGN5PSI0MiIgcj0iMC45IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIxIi8+PGNpcmNsZSBjeD0iMzQ1IiBjeT0iMTY3IiByPSIwLjYiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNyIvPjxjaXJjbGUgY3g9IjE0NyIgY3k9IjE2NCIgcj0iMC42IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIxIi8+PGNpcmNsZSBjeD0iMjEwIiBjeT0iMzE3IiByPSIxLjIiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNCIvPjxjaXJjbGUgY3g9IjE1MCIgY3k9IjMxNiIgcj0iMC42IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjciLz48Y2lyY2xlIGN4PSIxNDkiIGN5PSI2OSIgcj0iMC45IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjciLz48Y2lyY2xlIGN4PSIzMDYiIGN5PSI4MSIgcj0iMC45IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIxIi8+PGNpcmNsZSBjeD0iNCIgY3k9IjE4NiIgcj0iMC42IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjciLz48Y2lyY2xlIGN4PSI4NiIgY3k9IjE4NiIgcj0iMC45IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjciLz48Y2lyY2xlIGN4PSIyOTIiIGN5PSI0OSIgcj0iMC45IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjQiLz48Y2lyY2xlIGN4PSIyMTciIGN5PSIxMDYiIHI9IjAuNiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC40Ii8+PGNpcmNsZSBjeD0iMzEiIGN5PSIyOCIgcj0iMS4yIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjQiLz48Y2lyY2xlIGN4PSIzMDQiIGN5PSIzNDYiIHI9IjAuNiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMSIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjc5IiByPSIwLjkiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjEiLz48Y2lyY2xlIGN4PSIxMjciIGN5PSIxNjQiIHI9IjAuNiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC40Ii8+PGNpcmNsZSBjeD0iMjcwIiBjeT0iMTQ5IiByPSIwLjkiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjEiLz48Y2lyY2xlIGN4PSIxMDIiIGN5PSIyNDQiIHI9IjAuNiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC40Ii8+PGNpcmNsZSBjeD0iMjI0IiBjeT0iMjEwIiByPSIwLjkiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNCIvPjxjaXJjbGUgY3g9IjExMiIgY3k9IjIxNSIgcj0iMC45IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjQiLz48Y2lyY2xlIGN4PSIzMzEiIGN5PSIyMTkiIHI9IjAuNiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC43Ii8+PGNpcmNsZSBjeD0iOTYiIGN5PSIxNiIgcj0iMC42IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjciLz48Y2lyY2xlIGN4PSIxMjkiIGN5PSIxMjQiIHI9IjEuMiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC40Ii8+PGNpcmNsZSBjeD0iMzk1IiBjeT0iMTE4IiByPSIwLjkiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNyIvPjxjaXJjbGUgY3g9IjcyIiBjeT0iMTY2IiByPSIwLjYiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNyIvPjxjaXJjbGUgY3g9IjI4OSIgY3k9IjU5IiByPSIxLjIiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNyIvPjxjaXJjbGUgY3g9IjMzNCIgY3k9IjMzNCIgcj0iMS4yIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIxIi8+PGNpcmNsZSBjeD0iMjAiIGN5PSIyNTMiIHI9IjAuOSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC40Ii8+PGNpcmNsZSBjeD0iMjIwIiBjeT0iMTA3IiByPSIxLjIiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNCIvPjxjaXJjbGUgY3g9IjE3MiIgY3k9IjE1MSIgcj0iMS4yIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjciLz48Y2lyY2xlIGN4PSIzMjgiIGN5PSIxNjEiIHI9IjAuOSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMSIvPjxjaXJjbGUgY3g9IjExMCIgY3k9IjMzNSIgcj0iMS4yIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjciLz48Y2lyY2xlIGN4PSIxNzMiIGN5PSIyMDAiIHI9IjAuOSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC40Ii8+PGNpcmNsZSBjeD0iMTQzIiBjeT0iMzIxIiByPSIxLjIiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNCIvPjxjaXJjbGUgY3g9IjIyIiBjeT0iMjAyIiByPSIxLjIiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNCIvPjxjaXJjbGUgY3g9IjM5MiIgY3k9IjEzNyIgcj0iMS4yIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjQiLz48Y2lyY2xlIGN4PSI4NSIgY3k9IjM1MiIgcj0iMS4yIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjciLz48Y2lyY2xlIGN4PSIyOTEiIGN5PSIyNDEiIHI9IjEuMiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC43Ii8+PGNpcmNsZSBjeD0iMTk5IiBjeT0iMTExIiByPSIwLjYiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNCIvPjxjaXJjbGUgY3g9IjgwIiBjeT0iNiIgcj0iMS4yIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjciLz48Y2lyY2xlIGN4PSI1OSIgY3k9IjIwMiIgcj0iMC45IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjQiLz48Y2lyY2xlIGN4PSIyODEiIGN5PSIyNyIgcj0iMC42IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjQiLz48L3N2Zz4=);color:var(--ink);line-height:1.55}
+
+    img{display:block;max-width:100%;height:auto}
+    a{color:var(--sun)}
+    .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+    header{text-align:center;padding:64px 0 32px}
+    h1{font-size:clamp(2.4rem,7vw,4.4rem);line-height:1.05;margin:0 0 12px}
+    .lead{font-size:1.2rem;color:var(--mute);max-width:560px;margin:0 auto}
+    .strip{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:32px}
+    .strip a{text-decoration:none;color:var(--ink);text-align:center;font-size:.85rem;transition:transform .15s}
+    .strip a:hover{transform:translateY(-4px)}
+    section{padding:48px 0 8px}
+
+    h2{font-size:2rem;margin:0 0 6px}
+    h2::after{content:"";display:block;width:56px;height:5px;border-radius:3px;background:var(--sun);margin-top:8px}
+    .sub{color:var(--mute);margin:10px 0 24px}
+    .sizes{display:flex;align-items:flex-end;gap:22px;overflow-x:auto;padding:20px 8px 12px;background:var(--card);border-radius:20px}
+    .sz{display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-size:.8rem;flex:0 0 auto}
+    .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+    .ficha{background:var(--card);border-radius:20px;padding:20px;border-top:6px solid var(--c)}
+    .foto{position:relative;margin:0 0 12px;aspect-ratio:1/1;border:2px dashed #3a4580;border-radius:16px;overflow:hidden;display:grid;place-items:center;color:var(--mute);font-size:.85rem;text-align:center;background:#101737}
+    .foto span{padding:8px}
+    .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0}
+    .banner{aspect-ratio:5/2;max-width:900px;margin:32px auto 0}
+    .dot{display:inline-block;width:14px;height:14px;border-radius:50%;background:var(--c)}
+    .strip a{display:flex;align-items:center;gap:8px;background:var(--card);padding:6px 14px;border-radius:99px}
+    .circ{display:block;border-radius:50%}
+    .mini{gap:6px}
+    .ficha h3{margin:0;font-size:1.5rem;text-align:center}
+    .tipo{text-align:center;color:var(--c);margin:0 0 12px;font-weight:700}
+    dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.92rem}
+    dt{color:var(--mute)}dd{margin:0;text-align:right;font-weight:700}
+    .dato{margin:14px 0 0;font-size:.92rem}
+    mark{background:var(--sun);color:#1b1b1b;padding:1px 6px;border-radius:5px}
+    .tipos .card{background:var(--card);border-radius:20px;padding:20px}
+    .tipos h3{margin:0 0 10px}
+    .tipos ul{margin:0;padding-left:20px}
+    .mini{display:flex;gap:8px;margin-bottom:12px}
+    .mini .dot{width:18px;height:18px}
+    .bar{display:grid;grid-template-columns:90px 1fr 70px;gap:12px;align-items:center;margin:9px 0;font-size:.9rem}
+    .bar b{text-align:right}
+    .track{background:#232b55;border-radius:99px;height:16px;overflow:hidden}
+    .track i{display:block;height:100%;border-radius:99px}
+    .scroll{overflow-x:auto}
+    table{border-collapse:collapse;width:100%;min-width:640px;background:var(--card);border-radius:16px;overflow:hidden}
+    th,td{padding:11px 12px;text-align:center;border-bottom:1px solid #232b55}
+    thead th{background:#232b55;color:var(--sun)}
+    tbody th{text-align:left}
+    tbody tr:hover{background:#1c2450}
+    .orden{columns:2;padding-left:24px;background:var(--card);border-radius:20px;padding:20px 20px 20px 44px;margin:0}
+    footer{margin-top:56px;padding:28px 20px;text-align:center;color:var(--mute);border-top:1px solid #232b55}
+    @media(max-width:600px){.orden{columns:1}}
+    </style>
+</head>
+<body>
+
+    <header><div class="wrap">
+    <h1>Planetas del Sistema Solar</h1>
+    
+    <figure class="foto banner">
+
+    <span>Foto del Sistema Solar</span><img src="sistemasolar.jpg" alt="Los planetas del Sistema Solar" title="El Sistema Solar" width="1000" height="400" onerror="this.style.display='none'">
+    </figure>
+    <div class="strip"><a href="#mercurio" style="--c:#b8b0a4"><i class="dot"></i><span>Mercurio</span></a><a href="#venus" style="--c:#e8b45a"><i class="dot"></i><span>Venus</span></a><a href="#tierra" style="--c:#3d8ee8"><i class="dot"></i><span>Tierra</span></a><a href="#marte" style="--c:#e0663a"><i class="dot"></i><span>Marte</span></a><a href="#jupiter" style="--c:#d9a066"><i class="dot"></i><span>Júpiter</span></a><a href="#saturno" style="--c:#e6cf93"><i class="dot"></i><span>Saturno</span></a><a href="#urano" style="--c:#7fd6df"><i class="dot"></i><span>Urano</span></a><a href="#neptuno" style="--c:#4f74e8"><i class="dot"></i><span>Neptuno</span></a></div>
+    </div></header>
+    <main class="wrap">
+
+    <hr>
+
+    <section id="tipos"><h2>Tres tipos de planetas</h2>
+    <div class="grid tipos" style="margin-top:20px">
+    <div class="card"><div class="mini"><i class="dot" style="--c:#b8b0a4"></i><i class="dot" style="--c:#e8b45a"></i><i class="dot" style="--c:#3d8ee8"></i><i class="dot" style="--c:#e0663a"></i></div><h3>Rocosos</h3><ul><li>Superficie sólida</li><li>Pequeños y cercanos al Sol</li><li>Mercurio, Venus, Tierra y Marte</li></ul></div>
+    <div class="card"><div class="mini"><i class="dot" style="--c:#d9a066"></i><i class="dot" style="--c:#e6cf93"></i></div><h3>Gigantes gaseosos</h3><ul><li>Hidrógeno y helio</li><li>Los más grandes</li><li>Júpiter y Saturno</li></ul></div>
+    <div class="card"><div class="mini"><i class="dot" style="--c:#7fd6df"></i><i class="dot" style="--c:#4f74e8"></i></div><h3>Gigantes helados</h3><ul><li>Agua, amoníaco y metano</li><li>Muy fríos y lejanos</li><li>Urano y Neptuno</li></ul></div>
+    </div></section>
+
+    <section id="distancia"><h2>Distancia al Sol</h2>
+    <p class="sub">En millones de kilómetros.</p>
+    <div class="bar"><span>Mercurio</span><div class="track"><i style="width:2.5%;background:#b8b0a4"></i></div><b>57,9</b></div><div class="bar"><span>Venus</span><div class="track"><i style="width:2.5%;background:#e8b45a"></i></div><b>108,2</b></div><div class="bar"><span>Tierra</span><div class="track"><i style="width:3.3%;background:#3d8ee8"></i></div><b>149,6</b></div><div class="bar"><span>Marte</span><div class="track"><i style="width:5.1%;background:#e0663a"></i></div><b>227,9</b></div><div class="bar"><span>Júpiter</span><div class="track"><i style="width:17.3%;background:#d9a066"></i></div><b>778,5</b></div><div class="bar"><span>Saturno</span><div class="track"><i style="width:31.9%;background:#e6cf93"></i></div><b>1434</b></div><div class="bar"><span>Urano</span><div class="track"><i style="width:63.9%;background:#7fd6df"></i></div><b>2871</b></div><div class="bar"><span>Neptuno</span><div class="track"><i style="width:100.0%;background:#4f74e8"></i></div><b>4495</b></div>
+    </section>
+
+    <section id="fichas"><h2>Fichas de los planetas</h2>
+    <p class="sub">Ordenados desde el Sol.</p>
+    <div class="grid"><article class="ficha" id="mercurio" style="--c:#b8b0a4">
+    <figure class="foto">
+
+    <span>Foto de Mercurio</span><img src="mercurio.jpg" alt="Foto de Mercurio" title="Mercurio" width="300" height="300" onerror="this.style.display='none'">
+    </figure>
+    <h3>Mercurio</h3><p class="tipo">Rocoso</p>
+    <dl><dt>Diámetro</dt><dd>4.879 km</dd><dt>Distancia al Sol</dt><dd>57,9 millones de km</dd><dt>Duración del día</dt><dd>59 días</dd><dt>Duración del año</dt><dd>88 días</dd><dt>Lunas</dt><dd>0</dd></dl>
+    <p class="dato"><mark>El más pequeño y el más cercano al Sol.</mark></p></article><article class="ficha" id="venus" style="--c:#e8b45a">
+    <figure class="foto">
+
+    <span>Foto de Venus</span><img src="venus.jpg" alt="Foto de Venus" title="Venus" width="300" height="300" onerror="this.style.display='none'">
+    </figure>
+
+    <h3>Venus</h3><p class="tipo">Rocoso</p>
+    <dl><dt>Diámetro</dt><dd>12.104 km</dd><dt>Distancia al Sol</dt><dd>108,2 millones de km</dd><dt>Duración del día</dt><dd>243 días</dd><dt>Duración del año</dt><dd>225 días</dd><dt>Lunas</dt><dd>0</dd></dl>
+    <p class="dato"><mark>El más caliente, aunque Mercurio está más cerca del Sol.</mark></p></article><article class="ficha" id="tierra" style="--c:#3d8ee8">
+    <figure class="foto">
+
+    <span>Foto de Tierra</span><img src="tierra.jpg" alt="Foto de Tierra" title="Tierra" width="300" height="300" onerror="this.style.display='none'">
+    </figure>
+    <h3>Tierra</h3><p class="tipo">Rocoso</p>
+    <dl><dt>Diámetro</dt><dd>12.756 km</dd><dt>Distancia al Sol</dt><dd>149,6 millones de km</dd><dt>Duración del día</dt><dd>24 h</dd><dt>Duración del año</dt><dd>365 días</dd><dt>Lunas</dt><dd>1</dd></dl>
+    <p class="dato"><mark>El único planeta con vida conocida.</mark></p></article><article class="ficha" id="marte" style="--c:#e0663a">
+    <figure class="foto">
+
+    <span>Foto de Marte</span><img src="marte.jpg" alt="Foto de Marte" title="Marte" width="300" height="300" onerror="this.style.display='none'">
+    </figure>
+
+    <h3>Marte</h3><p class="tipo">Rocoso</p>
+    <dl><dt>Diámetro</dt><dd>6.779 km</dd><dt>Distancia al Sol</dt><dd>227,9 millones de km</dd><dt>Duración del día</dt><dd>24,6 h</dd><dt>Duración del año</dt><dd>687 días</dd><dt>Lunas</dt><dd>2</dd></dl>
+    <p class="dato"><mark>Tiene el volcán más alto: el Monte Olimpo.</mark></p></article><article class="ficha" id="jupiter" style="--c:#d9a066">
+    <figure class="foto">
+
+    <span>Foto de Júpiter</span><img src="jupiter.jpg" alt="Foto de Júpiter" title="Júpiter" width="300" height="300" onerror="this.style.display='none'">
+    </figure>
+    <h3>Júpiter</h3><p class="tipo">Gigante gaseoso</p>
+    <dl><dt>Diámetro</dt><dd>139.820 km</dd><dt>Distancia al Sol</dt><dd>778,5 millones de km</dd><dt>Duración del día</dt><dd>9,9 h</dd><dt>Duración del año</dt><dd>11,9 años</dd><dt>Lunas</dt><dd>Más de 90</dd></dl>
+    <p class="dato"><mark>Su Gran Mancha Roja es una tormenta enorme.</mark></p></article><article class="ficha" id="saturno" style="--c:#e6cf93">
+    <figure class="foto">
+
+    <span>Foto de Saturno</span><img src="saturno.jpg" alt="Foto de Saturno" title="Saturno" width="300" height="300" onerror="this.style.display='none'">
+    </figure>
+    <h3>Saturno</h3><p class="tipo">Gigante gaseoso</p>
+    <dl><dt>Diámetro</dt><dd>116.460 km</dd><dt>Distancia al Sol</dt><dd>1.434 millones de km</dd><dt>Duración del día</dt><dd>10,7 h</dd><dt>Duración del año</dt><dd>29,5 años</dd><dt>Lunas</dt><dd>Más de 200</dd></dl>
+    <p class="dato"><mark>Sus anillos son de hielo y roca.</mark></p></article><article class="ficha" id="urano" style="--c:#7fd6df">
+    <figure class="foto">
+
+    <span>Foto de Urano</span><img src="urano.jpg" alt="Foto de Urano" title="Urano" width="300" height="300" onerror="this.style.display='none'">
+    </figure>
+    <h3>Urano</h3><p class="tipo">Gigante helado</p>
+    <dl><dt>Diámetro</dt><dd>50.724 km</dd><dt>Distancia al Sol</dt><dd>2.871 millones de km</dd><dt>Duración del día</dt><dd>17,2 h</dd><dt>Duración del año</dt><dd>84 años</dd><dt>Lunas</dt><dd>28</dd></dl>
+    <p class="dato"><mark>Gira prácticamente tumbado de lado.</mark></p></article><article class="ficha" id="neptuno" style="--c:#4f74e8">
+    <figure class="foto">
+
+    <span>Foto de Neptuno</span><img src="neptuno.jpg" alt="Foto de Neptuno" title="Neptuno" width="300" height="300" onerror="this.style.display='none'">
+    </figure>
+    <h3>Neptuno</h3><p class="tipo">Gigante helado</p>
+    <dl><dt>Diámetro</dt><dd>49.244 km</dd><dt>Distancia al Sol</dt><dd>4.495 millones de km</dd><dt>Duración del día</dt><dd>16,1 h</dd><dt>Duración del año</dt><dd>165 años</dd><dt>Lunas</dt><dd>16</dd></dl>
+    <p class="dato"><mark>Tiene los vientos más rápidos del Sistema Solar.</mark></p></article></div>
+    </section>
+
+    <section id="comparar"><h2>Comparación rápida</h2>
+    <div class="scroll" style="margin-top:20px"><table>
+    <thead><tr><th scope="col">Planeta</th><th scope="col">Diámetro (km)</th><th scope="col">Distancia (M km)</th><th scope="col">Día</th><th scope="col">Año</th><th scope="col">Lunas</th><th scope="col">Temp. media</th></tr></thead>
+    <tbody><tr><th scope="row">Mercurio</th><td>4.879</td><td>57,9</td><td>59 días</td><td>88 días</td><td>0</td><td>167&nbsp;&deg;C</td></tr><tr><th scope="row">Venus</th><td>12.104</td><td>108,2</td><td>243 días</td><td>225 días</td><td>0</td><td>464&nbsp;&deg;C</td></tr><tr><th scope="row">Tierra</th><td>12.756</td><td>149,6</td><td>24 h</td><td>365 días</td><td>1</td><td>15&nbsp;&deg;C</td></tr><tr><th scope="row">Marte</th><td>6.779</td><td>227,9</td><td>24,6 h</td><td>687 días</td><td>2</td><td>−65&nbsp;&deg;C</td></tr><tr><th scope="row">Júpiter</th><td>139.820</td><td>778,5</td><td>9,9 h</td><td>11,9 años</td><td>Más de 90</td><td>−110&nbsp;&deg;C</td></tr><tr><th scope="row">Saturno</th><td>116.460</td><td>1434</td><td>10,7 h</td><td>29,5 años</td><td>Más de 200</td><td>−140&nbsp;&deg;C</td></tr><tr><th scope="row">Urano</th><td>50.724</td><td>2871</td><td>17,2 h</td><td>84 años</td><td>28</td><td>−195&nbsp;&deg;C</td></tr><tr><th scope="row">Neptuno</th><td>49.244</td><td>4495</td><td>16,1 h</td><td>165 años</td><td>16</td><td>−200&nbsp;&deg;C</td></tr></tbody></table></div>
+    <p class="sub">Si <mark>Temp. media</mark> &lt; 0&nbsp;&deg;C, el planeta está bajo cero.</p>
+    </section>
+
+    <section id="orden"><h2>Orden desde el Sol</h2>
+    <ol class="orden" style="margin-top:20px"><li><a href="#mercurio">Mercurio</a></li><li><a href="#venus">Venus</a></li><li><a href="#tierra">Tierra</a></li><li><a href="#marte">Marte</a></li><li><a href="#jupiter">Júpiter</a></li><li><a href="#saturno">Saturno</a></li><li><a href="#urano">Urano</a></li><li><a href="#neptuno">Neptuno</a></li></ol>
+    </section>
+
+    <section id="glosario"><h2>Glosario</h2>
+    <dl class="gl" style="margin-top:20px;grid-template-columns:140px 1fr;background:var(--card);padding:20px;border-radius:20px">
+    <dt>Órbita</dt><dd style="text-align:left;font-weight:400">Camino que sigue un planeta alrededor del Sol.</dd>
+    <dt>Rotación</dt><dd style="text-align:left;font-weight:400">Giro del planeta sobre sí mismo: un día.</dd>
+    <dt>Traslación</dt><dd style="text-align:left;font-weight:400">Vuelta completa alrededor del Sol: un año.</dd>
+    <dt>Luna</dt><dd style="text-align:left;font-weight:400">Satélite natural que orbita un planeta.</dd>
+    </dl></section>
+
+    </main>
+    <footer>Datos aproximados. Más información en <a href="https://www.nasa.gov" target="_blank" rel="noopener">NASA</a> · <a href="#">Volver arriba</a></footer>
+</body>
+</html>
